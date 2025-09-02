@@ -1,23 +1,25 @@
-public class TrashCan {
+public class TrashCan { // This is the CLASS
 
-    private String color; //= "tan"
-    private int weight; //= 20
+    private String color; //= "tan" These are INSTANCES
+    private double weight; //= 20.25
     private int cost; //= 50
     private String practicality; //= "10/10"
     private String size; //= "L"
     private String smell; //= 'Very'
 
-    public TrashCan() {
+    public TrashCan() { // This is a CONSTRUCTOR
         color = "Grey";
-        weight = 20;
+        weight = 20.25;
         cost = 50;
         practicality = "10/10";
         size = "L";
         smell = "Very";
 
     }
-
-    public void Deposit() {
+// public void/int/double/etc (type) Deposit (identifier) (parameters or argument in here)
+// public type identifier(parameters or argument)
+//Parameters could be (double(a type) amount)
+    public void Deposit() { // These are METHODS
         weight += 1;
         System.out.println("Congratulations!");
         return;
@@ -33,7 +35,7 @@ public class TrashCan {
         return;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     
     }
@@ -42,7 +44,7 @@ public class TrashCan {
         if (cost < 0.0001) {
             System.out.println("Stop burning worthless rubbish!");
         }
-        if (cost > 0.0001) {
+        else {
             System.out.println("This is a trash can no more.");
         }
         cost = 0;
@@ -51,5 +53,14 @@ public class TrashCan {
         
         return cost;
 
+    }
+
+    public void Facts(double newWeight) {
+        newWeight = getWeight();
+        System.out.println(color);
+        System.out.println(size);
+        System.out.println(practicality);
+        System.out.println(smell);
+        System.out.println(newWeight);
     }
 }

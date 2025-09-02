@@ -11,11 +11,12 @@ public class TrashCanTester {
         seaverhall1.getWeight();
         seaverhall1.Incinerate();
         seaverhall1.Incinerate();
+        seaverhall1.Facts(4);
 
 
     }
 
-    // public int multiply(int, a , int b) {
+    // public int multiply(int a , int b) {
 
 
     // }
