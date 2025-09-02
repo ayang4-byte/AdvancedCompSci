@@ -29,14 +29,16 @@ public class Unit0Exercises {
         } else if (weekday == false) {
             return true;
         } else {
-            return false; }
+            return false; 
+        }
     }
 
     public int diff21(int n) {
         if (n < 21) {
             return (21 - n);
         } else {
-            return 2 * (n - 21); }
+            return 2 * (n - 21); 
+        }
     }
 
     public double flooringCalculator(int sqft, double pricePerSqft) {
@@ -45,6 +47,7 @@ public class Unit0Exercises {
         } else if (pricePerSqft <= 0) {
             return 0;
         } else {
-            return sqft * pricePerSqft; }
+            return sqft * pricePerSqft; 
+        }
     }
 }
