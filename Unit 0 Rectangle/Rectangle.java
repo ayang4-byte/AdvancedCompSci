@@ -1,10 +1,15 @@
 public class Rectangle {
     private int width;
     private int length;
+    // private int startCoordinateX;
+    // private int startCoordinateY;
 
     public Rectangle(int newWidth, int newLength) {
         this.width = newWidth;
         this.length = newLength;
+        // this.startCoordinateX = newStartCoordinateX;
+        // this.startCoordinateY = newStartCoordinateY;
+        // System.out.println("The start coordinate is the bottom left corner of the rectangle");
     }
 
     public Rectangle() {
@@ -32,12 +37,11 @@ public class Rectangle {
 
     public String toString() {
         return "Rectangle: " + length + "x" + width;
-
     }
 
     public boolean equals(Rectangle anotherRectangle) {
-        if (this.length == anotherRectangle.length && 
-            this.width == anotherRectangle.width) {
+        if (this.length == anotherRectangle.length 
+            && this.width == anotherRectangle.width) {
             return true; 
         } else {
             return false;
