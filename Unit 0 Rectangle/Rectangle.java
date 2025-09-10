@@ -42,7 +42,7 @@ public class Rectangle {
     }
 
     public double getDiagonal() {
-        return Math.sqrt(length * length + width*width);
+        return Math.sqrt(length * length + width * width);
     }
 
     public String toString() {
