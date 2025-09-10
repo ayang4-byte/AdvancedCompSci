@@ -33,7 +33,17 @@ public class Rectangle {
         this.length = length;
     }
 
+    public int getArea() {
+        return length * width;
+    }
 
+    public int getPerimeter() {
+        return 2*length + 2*width;
+    }
+
+    public double getDiagonal() {
+        return Math.sqrt(length*length + width*width);
+    }
 
     public String toString() {
         return "Rectangle: " + length + "x" + width;
@@ -62,9 +72,4 @@ public class Rectangle {
         double diagonal = Math.sqrt(this.width * this.width + this.length * this.length);
         return diagonal;
     }
-
-
-
-
-
 }
