@@ -1,10 +1,10 @@
 public class Rectangle {
-    private int width;
     private int length;
+    private int width;
     // private int startCoordinateX;
     // private int startCoordinateY;
 
-    public Rectangle(int newWidth, int newLength) {
+    public Rectangle(int newLength, int newWidth) {
         this.width = newWidth;
         this.length = newLength;
         // this.startCoordinateX = newStartCoordinateX;
@@ -38,11 +38,11 @@ public class Rectangle {
     }
 
     public int getPerimeter() {
-        return 2*length + 2*width;
+        return 2 * length + 2 * width;
     }
 
     public double getDiagonal() {
-        return Math.sqrt(length*length + width*width);
+        return Math.sqrt(length * length + width*width);
     }
 
     public String toString() {
