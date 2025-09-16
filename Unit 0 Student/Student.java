@@ -14,6 +14,30 @@ public class Student {
         grade = 10;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getGrade() {
+        return grade;
+    }
+
+    public void setGrade(int grade) {
+        this.grade = grade;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String generateId() {
         int randNum1 = ((int) (Math.random() * 10));
         int randNum2 = ((int) (Math.random() * 10));
@@ -22,7 +46,8 @@ public class Student {
         int randNum5 = ((int) (Math.random() * 10));
         int randNum6 = ((int) (Math.random() * 10));
         int randNum7 = ((int) (Math.random() * 10));
-        return "#" + randNum1 + randNum2 + randNum3 + "-" + randNum4 + randNum5 + randNum6 + randNum7;
+        return "#" + randNum1 + randNum2 + randNum3 + "-" 
+        + randNum4 + randNum5 + randNum6 + randNum7;
     }
 
     public String toString() {
@@ -30,12 +55,13 @@ public class Student {
     }
 
     public boolean equal(Student otherStudent) {
-        if ((otherStudent.grade == this.grade) && (this.name.equals(otherStudent.name)) && (this.id.equals(otherStudent.id))) {
+        if ((otherStudent.grade == this.grade) && 
+        (this.name.equals(otherStudent.name)) && 
+        (this.id.equals(otherStudent.id))) {
             return true;
         }
         else {
             return false;
         }
     }
-
 }
