@@ -43,9 +43,9 @@ public class Unit0Exercises {
 
     public double flooringCalculator(int sqft, double pricePerSqft) {
         if (sqft <= 0) {
-            return 0;
+            return 0.0;
         } else if (pricePerSqft <= 0) {
-            return 0;
+            return 0.0;
         } else {
             return sqft * pricePerSqft; 
         }
