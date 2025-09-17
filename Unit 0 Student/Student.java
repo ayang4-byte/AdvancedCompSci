@@ -46,7 +46,7 @@ public class Student {
         int randNum5 = ((int) (Math.random() * 10));
         int randNum6 = ((int) (Math.random() * 10));
         int randNum7 = ((int) (Math.random() * 10));
-        return "#" + randNum1 + randNum2 + randNum3 + "-" 
+        return "" + randNum1 + randNum2 + randNum3 + "-" 
         + randNum4 + randNum5 + randNum6 + randNum7;
     }
 

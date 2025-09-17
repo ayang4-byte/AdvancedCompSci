@@ -4,5 +4,6 @@ public class StudentTester {
         Student junior = new Student("Johnny", 10);
         System.out.println(sophomore.generateId());
         System.out.println(sophomore.equals(junior));
+        System.out.println(sophomore.getId());
     }
 }
