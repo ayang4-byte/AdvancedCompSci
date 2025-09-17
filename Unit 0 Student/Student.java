@@ -54,13 +54,11 @@ public class Student {
         return "Name: " + name + " Grade: " + grade + " ID: " + id;
     }
 
-    public boolean equal(Student otherStudent) {
-        if ((otherStudent.grade == this.grade) && 
-        (this.name.equals(otherStudent.name)) && 
-        (this.id.equals(otherStudent.id))) {
+    public boolean equals(Student otherStudent) {
+        if ((otherStudent.grade == this.grade) 
+            && (this.name.equals(otherStudent.name))) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
