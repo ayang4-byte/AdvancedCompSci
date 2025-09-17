@@ -40,7 +40,7 @@ public class Student {
     }
 
     public String generateId() {
-        int randNum1 = ((int) (Math.random() * 10));
+        int randNum1 = ((int) (Math.random() * 10)) + 1;
         int randNum2 = ((int) (Math.random() * 10));
         int randNum3 = ((int) (Math.random() * 10));
         int randNum4 = ((int) (Math.random() * 10));
@@ -48,7 +48,7 @@ public class Student {
         int randNum6 = ((int) (Math.random() * 10));
         int randNum7 = ((int) (Math.random() * 10));
         return "" + randNum1 + randNum2 + randNum3 + "-" 
-            + randNum4 + randNum5 + randNum6 + randNum7 + "";
+            + randNum4 + randNum5 + randNum6 + randNum7;
     }
 
     public String toString() {
