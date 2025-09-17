@@ -40,10 +40,10 @@ public class Student {
     }
 
     public String generateId() {
-        int randNum1 = ((int) (Math.random() * 10)) + 1;
+        int randNum1 = ((int) (Math.random() * 8)) + 1;
         int randNum2 = ((int) (Math.random() * 10));
         int randNum3 = ((int) (Math.random() * 10));
-        int randNum4 = ((int) (Math.random() * 10));
+        int randNum4 = ((int) (Math.random() * 8)) + 1;
         int randNum5 = ((int) (Math.random() * 10));
         int randNum6 = ((int) (Math.random() * 10));
         int randNum7 = ((int) (Math.random() * 10));
