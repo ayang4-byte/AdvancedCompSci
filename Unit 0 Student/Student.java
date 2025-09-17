@@ -12,6 +12,7 @@ public class Student {
     public Student(String name) {
         this.name = name;
         grade = 10;
+        this.id = generateId();
     }
 
     public String getName() {
@@ -31,7 +32,7 @@ public class Student {
     }
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(String id) {
