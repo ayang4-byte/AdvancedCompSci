@@ -2,16 +2,34 @@ public class Student {
     private String name;
     private int grade;
     private String id;
+    private Student latestOpp;
+    private Student recentFriend;
 
-    public Student(String name, int grade) {
+    public Student getLatestOpp() {
+        return latestOpp;
+    }
+
+    public void setLatestOpp(Student latestOpp) {
+        this.latestOpp = latestOpp;
+    }
+
+    public Student getRecentFriend() {
+        return recentFriend;
+    }
+
+    public void setRecentFriend(Student recentFriend) {
+        this.recentFriend = recentFriend;
+    }
+
+    public Student(String name, int grade, Student latestOpp, Student recentFriend) {
         this.name = name;
         this.grade = grade;
         this.id = generateId();
     }
 
-    public Student(String name) {
+    public Student(String name, int grade) {
         this.name = name;
-        grade = 10;
+        this.grade = grade;
         this.id = generateId();
     }
 
@@ -63,4 +81,17 @@ public class Student {
             return false;
         }
     }
+
+    public String vibeCheck(Student other) {
+        if (this.latestOpp.equals(other.latestOpp)) {
+            this.recentFriend = other;
+            other.recentFriend = this;
+            return "" + this.name + " and " + other.name + " are now friends. They both dislike " + this.latestOpp + "";
+        } else {
+            return "They have nothing in common";
+        }
+
+    }
+
+    
 }
