@@ -25,7 +25,7 @@ public class Bank {
     
     public String toString() {
         return "This bank has " + numberOfLoanOfficers 
-        + " loan officers and " + numberOfTellers + " tellers";
+            + " loan officers and " + numberOfTellers + " tellers";
     }
 
     public int computeTotalEmployees() {
