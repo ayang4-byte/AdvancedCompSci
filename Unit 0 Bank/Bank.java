@@ -24,7 +24,8 @@ public class Bank {
     }
     
     public String toString() {
-        return "This bank has " + numberOfLoanOfficers + " loan officers and " + numberOfTellers + " tellers";
+        return "This bank has " + numberOfLoanOfficers 
+        + " loan officers and " + numberOfTellers + " tellers";
     }
 
     public int computeTotalEmployees() {
@@ -34,7 +35,7 @@ public class Bank {
     public boolean equals(Bank other) {
         if ((other.numberOfLoanOfficers == this.numberOfLoanOfficers) 
             && (other.numberOfTellers == this.numberOfTellers)) {
-                return true;
+            return true;
         } else {
             return false;
         }  
