@@ -47,4 +47,36 @@ public class Bank {
             numberOfTellers = numberOfTellers + numberToHire;
         }
     }
+
+    public double getEmployeeRatio() {
+        return numberOfLoanOfficers / (double) numberOfTellers;
+    }
+
+    public void fireMembers(int numberToFire, boolean isLoanOfficer) {
+        if (isLoanOfficer) {
+            numberOfLoanOfficers = numberOfLoanOfficers - numberToFire;
+        } else {
+            numberOfTellers = numberOfTellers - numberToFire;
+        }
+
+        if (numberOfLoanOfficers < 0) {
+            numberOfLoanOfficers = 0;
+        } else if (numberOfTellers < 0) {
+            numberOfTellers = 0;
+        }
+    }
+
+    public void transferEmployee(boolean fromLoanOfficer) {
+        if (fromLoanOfficer) {
+            numberOfLoanOfficers = numberOfLoanOfficers - 1;
+            numberOfTellers = numberOfTellers + 1;
+        } else {
+            numberOfTellers = numberOfTellers - 1;
+            numberOfLoanOfficers = numberOfLoanOfficers + 1;
+        }
+    }
+
+    public int estimateTotalSalary() {
+        return (1000 * (75 * numberOfLoanOfficers) + (45 * numberOfTellers));
+    }
 }

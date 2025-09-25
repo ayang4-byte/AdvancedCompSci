@@ -12,8 +12,15 @@ public class BankTester {
 
         System.out.println(bank1.equals(bank2)); // should print true
 
-        System.out.println(bank2); // prints "This bank has 3 loan officers
+        //System.out.println(bank2); // prints "This bank has 3 loan officers
         // and 5 tellers."
+        System.out.println(bank1.toString());
+        bank1.fireMembers(4, false);
+        System.out.println(bank1.toString());
+        bank1.transferEmployee(true);
+        System.out.println(bank1.toString());
+        System.out.println(bank1.getEmployeeRatio());
+        System.out.println(bank1.estimateTotalSalary());
 
     }
 }
