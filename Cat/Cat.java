@@ -1,7 +1,7 @@
 public class Cat { //changed Public to public, and Cats to Cat
 	private String name;
 	private String breed;
-	private boolean isHungry;
+    private boolean isHungry;
 	private int livesRemaining;
 	
 	// 2-Parameter Constructor
@@ -12,6 +12,14 @@ public class Cat { //changed Public to public, and Cats to Cat
 		livesRemaining = 9;
 	}
     
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
 //changed return type to String
 	public String getName() { 
 		return name;
