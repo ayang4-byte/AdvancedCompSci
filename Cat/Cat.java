@@ -12,6 +12,7 @@ public class Cat { //changed Public to public, and Cats to Cat
 		livesRemaining = 9;
 	}
     
+    //added getter and setter for breed
     public void setBreed(String breed) {
         this.breed = breed;
     }
