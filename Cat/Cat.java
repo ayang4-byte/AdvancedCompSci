@@ -40,8 +40,9 @@ public class Cat { //changed Public to public, and Cats to Cat
         return isHungry;
 	}
 //added another equals sign to the comparison of livesRemaining because we are not assigning a value to a variable
+//changed comparison of name to .equals()
 	public boolean equals(Cat other) { 
-		return this.name == other.name && this.breed.equals(other.breed)
+		return this.name.equals(other.name) && this.breed.equals(other.breed)
 			&& this.livesRemaining == other.livesRemaining;
 	}
 //changed System.out.println to return
