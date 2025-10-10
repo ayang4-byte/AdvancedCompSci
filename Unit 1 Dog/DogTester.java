@@ -8,11 +8,10 @@ public class DogTester {
         System.out.println(samoyed.toString());
         
         System.out.println(samoyed.getDogTag());
+        samoyed.setDogTag("456K");
         System.out.println(PawesomeUtils.validateDogTag(samoyed));
         System.out.println(samoyed.getDogTag());
-        System.out.println(PawesomeUtils.generateDogChar(123));
         System.out.println(PawesomeUtils.generateDogTag(123, 'L'));
-        System.out.println(PawesomeUtils.convertAgeToDogYears(49));
 
     }
 }

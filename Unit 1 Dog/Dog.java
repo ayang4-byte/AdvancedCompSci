@@ -84,10 +84,20 @@ public class Dog {
     }
 
     public String toString() {
-        return "Name: " + name + " Owner: " + ownerName + 
-                " Dogtag: " + dogTag + " Age: " + age + 
-                " DogID: " + dogId + " Dog Char: " + dogChar + 
-                " Facility Status: " + stillInFacility;
+        return "Name: " 
+                + name 
+                + " Owner: " 
+                + ownerName 
+                + " Dogtag: " 
+                + dogTag 
+                + " Age: " 
+                + age 
+                + " DogID: " 
+                + dogId 
+                + " Dog Char: " 
+                + dogChar 
+                + " Facility Status: " 
+                + stillInFacility;
     }
 
     public boolean equals(Dog other) {
@@ -95,7 +105,7 @@ public class Dog {
             && this.dogTag.equals(other.dogTag) && this.age == other.age 
             && this.dogId == other.dogId && this.dogChar == other.dogChar 
             && this.stillInFacility == other.stillInFacility) {
-                return true;
+            return true;
         }
         return false;
     }   

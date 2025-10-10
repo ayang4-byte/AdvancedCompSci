@@ -45,7 +45,6 @@ public class PawesomeUtils {
         if (validateDogId(dogId) == dogId) {
             char dogChar = generateDogChar(dogId);
             String newDogTag = "" + dogId + dogChar;
-            System.out.println(newDogTag);
             return newDogTag.equals(dog.getDogTag());
         } else {
             return false;
