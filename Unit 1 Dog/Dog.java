@@ -64,7 +64,7 @@ public class Dog {
     }
 
     public void setDogId(int dogId) {
-        dogId = PawesomeUtils.validateDogId(dogId);
+        this.dogId = dogId;
     }
 
     public char getDogChar() {
