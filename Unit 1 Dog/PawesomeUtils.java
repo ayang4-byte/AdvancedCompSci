@@ -22,7 +22,12 @@ public class PawesomeUtils {
 
     public static void checkIn(Dog dog, String personName) {
         dog.setOwnerName(personName);
-        dog.setStillInFacility(true);
+        if (PawesomeUtils.validateDogTag(dog)) {
+            dog.setStillInFacility(true);
+            System.out.println("Your dog is checked in.");
+        } else {
+            System.out.println("Your done, you dognapper.");
+        }
     } 
 
     public static int validateDogId(int dogId) {
@@ -40,9 +45,38 @@ public class PawesomeUtils {
         if (validateDogId(dogId) == dogId) {
             char dogChar = generateDogChar(dogId);
             String newDogTag = "" + dogId + dogChar;
-            return newDogTag == dog.getDogTag();
+            System.out.println(newDogTag);
+            return newDogTag.equals(dog.getDogTag());
         } else {
             return false;
         }
+    }
+
+    public static int ageToHumanAge(Dog dog) {
+        int humanAge = 0;
+        if (dog.getAge() < 0) {
+            return 0;
+        }
+        if (dog.getAge() == 1) {
+            humanAge = 15;
+        } else if (dog.getAge() == 2) {
+            humanAge = 24;
+        } else {
+            humanAge = ((dog.getAge() - 2) * 5) + 24;
+        }
+        return humanAge;
+    }
+
+    public static int convertAgeToDogYears(int humanYears) {
+        int dogAge = 0;
+        if (0 <= humanYears &&  humanYears <= 15) {
+            dogAge = 1;
+        } else if (15 < humanYears && humanYears <= 24) {
+            dogAge = 2;
+        } else {
+            humanYears -= 24;
+            dogAge = (humanYears / 5) + 2;
+        }
+        return dogAge;
     }
 }
