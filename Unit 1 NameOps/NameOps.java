@@ -46,7 +46,7 @@ public class NameOps {
     }
 
     public static String findMiddleName(String name) {
-        int firstSpace = indexOfFirstSpace(name);
+        int firstSpace = indexOfFirstSpace(name) + 1;
         int secondSpace = indexOfSecondSpace(name);
         if (secondSpace != -1 && firstSpace != -1) {
             return name.substring(firstSpace, secondSpace);
@@ -55,8 +55,15 @@ public class NameOps {
         }
     }
 
-    public static String findMidInitial(String name) {
-        char middleInitial = findMiddleName(name).charAt(0);
-        return findLastName(name) + ", " + findFirstName(name) + ", " + middleInitial;
+    public static String generateLastFirstMidInitial(String name) {
+        String middleName = findMiddleName(name);
+        if (middleName != "") {
+            char middleInitial = middleName.charAt(0);
+            return "" + findLastName(name) + ", " + findFirstName(name) + " " + middleInitial + ".";
+        } else if (findLastName(name) != "") {
+            return "" + findLastName(name) + ", " + findFirstName(name);
+        } else {
+            return "" + findFirstName(name);
+        }
     }
 }
