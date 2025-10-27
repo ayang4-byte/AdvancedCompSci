@@ -75,7 +75,7 @@ public class Cat {
     }
 
     public void setCatId(String catId) {
-        this.catId = catId;
+        this.catId = PurrfectUtils.validateCatId(catId);
     }
 
     public char getCatChar() {
