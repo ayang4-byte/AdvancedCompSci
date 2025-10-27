@@ -19,7 +19,7 @@ public class Cat {
         this.name = "Johnny";
         this.catId = "1234";
         this.catChar = PurrfectUtils.generateCatChar(catId);
-        this.isHungry = false;
+        this.isHungry = true;
         this.ownerName = "Bill";
         this.moodLevel = 7;
     }
@@ -66,9 +66,8 @@ public class Cat {
             moodLevel = 10;
         } else if (moodLevel < 0) {
             moodLevel = 0;
-        } else {
-            this.moodLevel = moodLevel;
         }
+        this.moodLevel = moodLevel;
     }
 
     public String getCatId() {
