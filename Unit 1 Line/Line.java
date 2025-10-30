@@ -47,10 +47,10 @@ public class Line {
         if (calculateSlope() == other.calculateSlope()) {
             return "Parallel";
         } else {
-            double xCoord = (((double) other.c / other.b) - ((double) this.c / this.b)) / 
-                            (((double) other.a / other.b) - ((double) this.a / this.b));
-            double yCoord = ((c * -1) - (a * xCoord)) / b;
-            return "(" + xCoord + ", " + yCoord + ")";
+            double xcoord = (((double) other.c / other.b) - ((double) this.c / this.b)) 
+                            / (((double) other.a / other.b) - ((double) this.a / this.b));
+            double ycoord = ((c * -1) - (a * xcoord)) / b;
+            return "(" + xcoord + ", " + ycoord + ")";
         } 
 
     }
@@ -100,9 +100,9 @@ public class Line {
     }
 
     public double calculateSlopeFromPoints() {
-        double dY = p1.getY() - p2.getY();
-        double dX = p1.getX() - p2.getX();
-        return dY/dX;
+        double dy = p1.getY() - p2.getY();
+        double dx = p1.getX() - p2.getX();
+        return dy / dx;
     }
 
     public String generatePointSlopeFormula() {
