@@ -57,7 +57,7 @@ public class Home {
         return isScheduled;
     }
 
-    public void setScheduled(boolean isScheduled) {
+    public void setIsScheduled(boolean isScheduled) {
         this.isScheduled = isScheduled;
     }
 

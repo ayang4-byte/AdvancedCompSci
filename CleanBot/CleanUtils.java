@@ -10,13 +10,13 @@ public class CleanUtils {
 
     public static String generateUsername(String name) {
         int spaceLoc = name.indexOf(" ");
-        String lastName = name.substring(spaceLoc+1);
+        String lastName = name.substring(spaceLoc + 1);
         String firstName = name.substring(0, spaceLoc);
         int id = ((int) (Math.random() * 100)) + 1950;
         return "@" + firstName + "_" + lastName + "_" + id;
     }
 
-    public static void cleanHome (Home home) {
+    public static void cleanHome(Home home) {
         home.setCleanlinessLevel(home.getCleanlinessLevel() + 2);
     }
 
