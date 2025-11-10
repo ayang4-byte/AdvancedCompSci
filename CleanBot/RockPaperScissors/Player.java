@@ -15,12 +15,11 @@ public class Player {
     }
 
     public void setChoice(String choice) {
-        choice = "";
         choice = choice.toLowerCase();
         if (RPSGame.validateChoice(choice) == true) {
             this.choice = choice;
         } else {
-            RPSGame.generateRandomChoice();
+            this.choice = RPSGame.generateRandomChoice();
         }
     }
 
