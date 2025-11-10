@@ -15,7 +15,9 @@ public class Player {
     }
 
     public void setChoice(String choice) {
-        choice = choice.toLowerCase();
+        if (choice != null) {
+            choice = choice.toLowerCase();
+        }
         if (RPSGame.validateChoice(choice) == true) {
             this.choice = choice;
         } else {
@@ -24,6 +26,6 @@ public class Player {
     }
 
     public String toString() {
-        return "" + name + " chose " + choice;
+        return "" + name + " chose " + choice + ".";
     }
 }

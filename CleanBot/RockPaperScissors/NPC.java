@@ -19,6 +19,6 @@ public class NPC {
     }
 
     public String toString() {
-        return "Opponent chose " + choice;
+        return "Opponent chose " + choice + ".";
     }
 }
