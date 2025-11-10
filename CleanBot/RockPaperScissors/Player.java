@@ -15,9 +15,8 @@ public class Player {
     }
 
     public void setChoice(String choice) {
-        if (choice != null) {
-            choice = choice.toLowerCase();
-        }
+        choice = "";
+        choice = choice.toLowerCase();
         if (RPSGame.validateChoice(choice) == true) {
             this.choice = choice;
         } else {
