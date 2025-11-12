@@ -10,10 +10,10 @@ public class ArrayOps {
      */
     public static String printStringArray(String[] array) {
         String newArray = "[";
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length - 1; i++) {
             newArray = newArray + array[i] + ", ";
         }
-        newArray = newArray + "]";
+        newArray = newArray + array[array.length - 1] + "]";
         System.out.println(newArray);
         return newArray;
     }
@@ -29,10 +29,10 @@ public class ArrayOps {
 
     public static String printIntegerArray(int[] array) {
         String newArray = "[";
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length - 1; i++) {
             newArray = newArray + array[i] + ", ";
         }
-        newArray = newArray + "]";
+        newArray = newArray + array[array.length - 1] + "]";
         System.out.println(newArray);
         return newArray;
     }
@@ -45,9 +45,9 @@ public class ArrayOps {
      * @return The largest integer in the array.
      */
     public static int findMax(int[] array) {
-        int max = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] > max) {
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > array[i - 1]) {
                 max = array[i];
             }
         }
@@ -64,7 +64,7 @@ public class ArrayOps {
      * @return The longest String in the array.
      */
     public static String findLongestString(String[] array) {
-        String longest = "";
+        String longest = array[0];
         for (int i = 0; i < array.length; i++) {
             if (! array[i].equals(null)) {
                 if (array[i].length() > longest.length()) {
