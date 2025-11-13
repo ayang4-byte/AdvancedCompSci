@@ -9,6 +9,9 @@ public class ArrayOps {
      * @return The constructed string representation of the array.
      */
     public static String printStringArray(String[] array) {
+        if (array == null) {
+            return "[]";
+        }
         String newArray = "[";
         for (int i = 0; i < array.length - 1; i++) {
             newArray = newArray + array[i] + ", ";
@@ -64,9 +67,9 @@ public class ArrayOps {
      * @return The longest String in the array.
      */
     public static String findLongestString(String[] array) {
-        String longest = array[0];
+        String longest = "";
         for (int i = 0; i < array.length; i++) {
-            if (! array[i].equals(null)) {
+            if (array[i] != null) {
                 if (array[i].length() > longest.length()) {
                     longest = array[i];
                 }
@@ -86,7 +89,7 @@ public class ArrayOps {
         double avg = 0;
         int counter = 0;
         for (int i = 0; i < array.length; i++) {
-            if (! array[i].equals(null)) {
+            if (array[i] != null) {
                 avg = avg + array[i].length();
                 counter = counter + 1;
             }
@@ -177,11 +180,11 @@ public class ArrayOps {
      */
     public static String[] addNumToStringArray(String[] array) {
         for (int i = 0; i < array.length; i++) {
-            if (! array[0].equals(null)) {
-                array[0] = "#" + i + " " + array[0];
+            if (array[i] != null) {
+                array[i] = "#" + i + " " + array[i];
             }
         }
-        if (array[0].equals(null)) {
+        if (array[0] == null) {
             return new String[0];
         }
         return array;
