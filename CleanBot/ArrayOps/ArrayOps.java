@@ -11,6 +11,8 @@ public class ArrayOps {
     public static String printStringArray(String[] array) {
         if (array == null) {
             return "[]";
+        } else if (array.length == 0) {
+            return "[]";
         }
         String newArray = "[";
         for (int i = 0; i < array.length - 1; i++) {
@@ -115,6 +117,7 @@ public class ArrayOps {
      */
     public static int[] countLetterFrequencies(String input) {
         int[] frequencies = new int[26];
+        input = input.toLowerCase();
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
         for (int i = 0; i < 26; i++) {
             int counter = 0;
@@ -123,6 +126,7 @@ public class ArrayOps {
                 if (alphabet.charAt(i) == input1.charAt(0)) {
                     counter = counter + 1;
                 }
+                
             }
             frequencies[i] = counter;
         }
@@ -142,7 +146,6 @@ public class ArrayOps {
     public static int[] removeIntAndScoot(int[] array, int index) {
         for (int i = index; i < array.length - 1; i++) {
             array[i] = array[i + 1];
-            System.out.println(array[i]);
         }
         array[array.length - 1] = 0;
         return array;
@@ -156,12 +159,15 @@ public class ArrayOps {
      * @return The resized array
      */
     public static int[] resizeIntArray(int[] array) {
-        int[] newArray = new int[array.length * 2];
-        for (int i = 0; i < array.length; i++) {
-            newArray[i] = array[i];
-        }
-        for (int i = array.length; i < newArray.length; i++) {
-            newArray[i] = 0;
+        int[] newArray = new int[0];
+        if (newArray != null) {
+            newArray = new int[array.length * 2];
+            for (int i = 0; i < array.length; i++) {
+                newArray[i] = array[i];
+            }
+            for (int i = array.length; i < newArray.length; i++) {
+                newArray[i] = 0;
+            }
         }
         return newArray;
     }
@@ -202,8 +208,8 @@ public class ArrayOps {
         int[] newArray = new int[array.length];
         int num = array.length;
         for (int i = 0; i < num; i++) {
-            newArray[i] = array[num - i];
+            newArray[i] = array[num - 1 - i];
         }
-        return array;
+        return newArray;
     }
 }
