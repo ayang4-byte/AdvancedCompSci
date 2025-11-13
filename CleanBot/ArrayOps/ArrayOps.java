@@ -119,12 +119,12 @@ public class ArrayOps {
         for (int i = 0; i < 26; i++) {
             int counter = 0;
             for (int j = 0; j < input.length(); j++) {
-                if (alphabet.charAt(i) == input.charAt(0)) {
+                String input1 = input.substring(j);
+                if (alphabet.charAt(i) == input1.charAt(0)) {
                     counter = counter + 1;
                 }
-                input = input.substring(j + 1);
             }
-            frequencies[i] = frequencies[counter];
+            frequencies[i] = counter;
         }
         return frequencies;
     }
@@ -140,8 +140,9 @@ public class ArrayOps {
      * @return The updated array
      */
     public static int[] removeIntAndScoot(int[] array, int index) {
-        for (int i = index + 1; i < array.length; i++) {
-            array[index] = array[index + 1];
+        for (int i = index; i < array.length - 1; i++) {
+            array[i] = array[i + 1];
+            System.out.println(array[i]);
         }
         array[array.length - 1] = 0;
         return array;
