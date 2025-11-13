@@ -191,7 +191,7 @@ public class ArrayOps {
      *         each String
      */
     public static String[] addNumToStringArray(String[] array) {
-        if (array[0] == null || array.length == 0) {
+        if (array == null || array.length == 0) {
             String[] empty = new String[0];
             return empty;
         }
