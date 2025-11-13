@@ -116,6 +116,10 @@ public class ArrayOps {
      *         string.
      */
     public static int[] countLetterFrequencies(String input) {
+        if (input == null) {
+            int[] empty = new int[0];
+            return empty;
+        }
         int[] frequencies = new int[26];
         input = input.toLowerCase();
         String alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -159,15 +163,16 @@ public class ArrayOps {
      * @return The resized array
      */
     public static int[] resizeIntArray(int[] array) {
-        int[] newArray = new int[0];
-        if (newArray != null) {
-            newArray = new int[array.length * 2];
-            for (int i = 0; i < array.length; i++) {
-                newArray[i] = array[i];
-            }
-            for (int i = array.length; i < newArray.length; i++) {
-                newArray[i] = 0;
-            }
+        if (array == null) {
+            int[] empty = new int[0];
+            return empty;
+        }
+        int[] newArray = new int[array.length * 2];
+        for (int i = 0; i < array.length; i++) {
+            newArray[i] = array[i];
+        }
+        for (int i = array.length; i < newArray.length; i++) {
+            newArray[i] = 0;
         }
         return newArray;
     }
@@ -186,13 +191,14 @@ public class ArrayOps {
      *         each String
      */
     public static String[] addNumToStringArray(String[] array) {
+        if (array[0] == null || array.length == 0) {
+            String[] empty = new String[0];
+            return empty;
+        }
         for (int i = 0; i < array.length; i++) {
             if (array[i] != null) {
                 array[i] = "#" + i + " " + array[i];
             }
-        }
-        if (array[0] == null) {
-            return new String[0];
         }
         return array;
     }
@@ -205,6 +211,10 @@ public class ArrayOps {
      * @return The reversed array
      */
     public static int[] reverseIntArray(int[] array) {
+        if (array == null) {
+            int[] empty = new int[0];
+            return empty;
+        }
         int[] newArray = new int[array.length];
         int num = array.length;
         for (int i = 0; i < num; i++) {
