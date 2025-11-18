@@ -47,7 +47,7 @@ public class Course {
     public double calculateTestAverage(int test) {
         double average = 0.0;
         for (int i = 0; i < enrolledStudents.length; i++) {
-            average += enrolledStudents[i].getTestScore(test - 1);
+            average += enrolledStudents[i].getTestScore(test);
         }
         return average / enrolledStudents.length;
     }
