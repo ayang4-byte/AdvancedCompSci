@@ -22,7 +22,7 @@ public class Course {
     public void setEnrolledStudents(StudentRecord[] enrolledStudents) {
         this.enrolledStudents = enrolledStudents;
     }
-    
+
     public String toString() {
         String result = "==" + courseName + "==\n";
         for (int i = 0; i < enrolledStudents.length; i++) {
@@ -44,7 +44,7 @@ public class Course {
         return bestStudent;
     }
 
-    public double getTestAverage(int test) {
+    public double calculateTestAverage(int test) {
         double average = 0.0;
         for (int i = 0; i < enrolledStudents.length; i++) {
             average += enrolledStudents[i].getTestScore(test);
