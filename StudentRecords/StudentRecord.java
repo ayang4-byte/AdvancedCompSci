@@ -42,14 +42,14 @@ public class StudentRecord {
     }
 
     public double getAverage(int first, int last) {
-        double average = 0;
-        for (int i = 0; i < scores.length; i++) {
+        double average = 0.0;
+        for (int i = first; i < last + 1; i++) {
             if (first < 0 || last >= scores.length || first > last) {
                 return -1;
             }
             average = average + scores[i];
         }
-        return average / (last - first + 1);
+        return (double) (average / (last - first + 1));
     }
 
     /*
@@ -78,18 +78,17 @@ public class StudentRecord {
      */
 
     public double getFinalAverage() {
+        double finalAverage = 0.0;
         if (hasImproved() == true) {
             if (scores.length % 2 != 0) {
-                double finalAverage = getAverage(scores.length / 2 + 1, scores.length - 1);
-                return finalAverage;
+                finalAverage = getAverage(scores.length / 2, scores.length - 1);
             } else {
-                double finalAverage = getAverage(scores.length / 2, scores.length - 1);
-                return finalAverage;
+                finalAverage = getAverage(scores.length / 2, scores.length - 1);
             }
         } else {
-            double finalAverage = getAverage(0, scores.length - 1);
-            return finalAverage;
+            finalAverage = getAverage(0, scores.length - 1);
         } 
+        return finalAverage;
     }
 
     public int getTestScore(int testNumber) {
