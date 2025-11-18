@@ -73,10 +73,10 @@ public class StudentRecord {
 
     public double getFinalAverage() {
         if (hasImproved() == true) {
-            double finalAverage = getAverage(scores.length / 2, scores.length);
+            double finalAverage = getAverage(scores.length / 2, scores.length - 1);
             return finalAverage;
         } else {
-            double finalAverage = getAverage(0, scores.length);
+            double finalAverage = getAverage(0, scores.length - 1);
             return finalAverage;
         } 
     }

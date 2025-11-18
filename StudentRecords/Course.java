@@ -26,7 +26,7 @@ public class Course {
     public String toString() {
         String result = "==" + courseName + "==\n";
         for (int i = 0; i < enrolledStudents.length; i++) {
-            result = result + (i + 1) + ".)" + enrolledStudents[i].toString() + "\n";
+            result = result + (i + 1) + ".) " + enrolledStudents[i].toString() + "\n";
         }
         return result;
     }
@@ -47,7 +47,7 @@ public class Course {
     public double calculateTestAverage(int test) {
         double average = 0.0;
         for (int i = 0; i < enrolledStudents.length; i++) {
-            average += enrolledStudents[i].getTestScore(test);
+            average += enrolledStudents[i].getTestScore(test - 1);
         }
         return average / enrolledStudents.length;
     }
