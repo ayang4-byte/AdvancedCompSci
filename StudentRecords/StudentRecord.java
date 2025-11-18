@@ -25,25 +25,22 @@ public class StudentRecord {
         this.scores = scores;
     }
 
-    // getters
-    // to-do: implement getters
-    // to-do: implement getTestScore
+    public String toString() {
+        String result = name + ": [" + scores[0];
+        for (int i = 1; i < scores.length; i++) {
+            result = result + ", " + scores[i];
+        }
+        result = result + "]";
+        return result;
+    }
 
-    // inherited methods
-    // to-do: implement toString
+    public boolean equals(StudentRecord other) {
+        if (this.toString().equals(other.toString())) {
+            return true;
+        }
+        return false;
+    }
 
-    // methods
-
-    /*
-     * returns the average (arithmetic mean) of the values in scores
-     * precondition: 0 <= first < last < scores.length
-     * 
-     * @param first - the first index of the scores array
-     * 
-     * @param last - the last index of the scores array
-     * 
-     * @return the double average of the values in scores
-     */
     public double getAverage(int first, int last) {
         double average = (scores[first] + scores[last]) / 2;
         return average;
@@ -89,21 +86,5 @@ public class StudentRecord {
             return -1;
         }
         return scores[testNumber - 1];
-    }
-
-    public String toString() {
-        String result = name + ": [" + scores[0];
-        for (int i = 1; i < scores.length; i++) {
-            result = result + ", " +scores[i];
-        }
-        result = result + "]";
-        return result;
-    }
-
-    public boolean equals(StudentRecord other) {
-        if (this.toString().equals(other.toString())) {
-            return true;
-        }
-        return false;
     }
 }

@@ -6,7 +6,23 @@ public class Course {
         this.courseName = courseName;
         this.enrolledStudents = enrolledStudents;
     }
+    
+    public String getCourseName() {
+        return courseName;
+    }
 
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public StudentRecord[] getEnrolledStudents() {
+        return enrolledStudents;
+    }
+
+    public void setEnrolledStudents(StudentRecord[] enrolledStudents) {
+        this.enrolledStudents = enrolledStudents;
+    }
+    
     public String toString() {
         String result = "==" + courseName + "==\n";
         for (int i = 0; i < enrolledStudents.length; i++) {
