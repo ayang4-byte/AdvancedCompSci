@@ -26,7 +26,7 @@ public class StudentRecord {
     }
 
     public String toString() {
-        String result = name + ": [" + scores[0];
+        String result = name + "'s scores: [" + scores[0];
         for (int i = 1; i < scores.length; i++) {
             result = result + ", " + scores[i];
         }

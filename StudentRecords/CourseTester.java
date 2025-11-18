@@ -1,6 +1,6 @@
 public class CourseTester {
     public static void main(String[] args) {
-        int[] scores1 = {70, 75, 80, 85, 90};
+        int[] scores1 = {80, 90, 100, 95};
         StudentRecord student1 = new StudentRecord("Johnny", scores1);
 
         int[] scores2 = {90, 85, 80, 75, 70};
@@ -23,6 +23,6 @@ public class CourseTester {
         System.out.println("\nAverage of first and last score: " 
                             + student2.getAverage(0, scores2.length - 1));
         System.out.println("Has improved: " + student2.hasImproved());
-        System.out.println(student1.toString());
+        System.out.println(student1.getTestScore(3));
     }
 }
