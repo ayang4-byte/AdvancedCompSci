@@ -42,8 +42,14 @@ public class StudentRecord {
     }
 
     public double getAverage(int first, int last) {
-        double average = (double) (scores[first] + scores[last]) / 2;
-        return average;
+        double average = 0;
+        for (int i = 0; i < scores.length; i++) {
+            if (first < 0 || last >= scores.length || first > last) {
+                return -1;
+            }
+            average = average + scores[i];
+        }
+        return average / (last - first + 1);
     }
 
     /*
