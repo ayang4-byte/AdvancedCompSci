@@ -42,7 +42,7 @@ public class StudentRecord {
     }
 
     public double getAverage(int first, int last) {
-        double average = (scores[first] + scores[last]) / 2;
+        double average = (double) (scores[first] + scores[last]) / 2;
         return average;
     }
 
