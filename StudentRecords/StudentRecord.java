@@ -73,8 +73,13 @@ public class StudentRecord {
 
     public double getFinalAverage() {
         if (hasImproved() == true) {
-            double finalAverage = getAverage(scores.length / 2, scores.length - 1);
-            return finalAverage;
+            if (scores.length % 2 != 0) {
+                double finalAverage = getAverage(scores.length / 2 + 1, scores.length - 1);
+                return finalAverage;
+            } else {
+                double finalAverage = getAverage(scores.length / 2, scores.length - 1);
+                return finalAverage;
+            }
         } else {
             double finalAverage = getAverage(0, scores.length - 1);
             return finalAverage;
@@ -82,9 +87,9 @@ public class StudentRecord {
     }
 
     public int getTestScore(int testNumber) {
-        if (testNumber < 1 || testNumber > scores.length) {
+        if (testNumber < 0 || testNumber >= scores.length) {
             return -1;
         }
-        return scores[testNumber - 1];
+        return scores[testNumber];
     }
 }

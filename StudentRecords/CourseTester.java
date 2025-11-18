@@ -1,7 +1,7 @@
 public class CourseTester {
     public static void main(String[] args) {
         int[] scores1 = {80, 90, 100, 95};
-        StudentRecord student1 = new StudentRecord("Johnny", scores1);
+        StudentRecord student1 = new StudentRecord("John Doe", scores1);
 
         int[] scores2 = {90, 85, 80, 75, 70};
         StudentRecord student2 = new StudentRecord("Kai", scores2);
