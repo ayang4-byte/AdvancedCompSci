@@ -44,9 +44,6 @@ public class StudentRecord {
     public double getAverage(int first, int last) {
         double average = 0.0;
         for (int i = first; i < last + 1; i++) {
-            if (first < 0 || last >= scores.length || first > last) {
-                return -1;
-            }
             average = average + scores[i];
         }
         return (double) (average / (last - first + 1));
