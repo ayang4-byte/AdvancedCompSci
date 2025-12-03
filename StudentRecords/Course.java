@@ -66,18 +66,18 @@ public class Course {
         return true;
     }
 
-    public void enrollStudent(StudentRecord Student) {
+    public void enrollStudent(StudentRecord student) {
         for (int i = 0; i < enrolledStudents.length; i++) {
             if (enrolledStudents[i] == null) {
-                enrolledStudents[i] = Student;
+                enrolledStudents[i] = student;
                 return;
             }
         }
     }
 
-    public boolean dropStudent(StudentRecord Student) {
+    public boolean dropStudent(StudentRecord student) {
         for (int i = 0; i < enrolledStudents.length; i++) {
-            if (enrolledStudents[i] == Student) {
+            if (enrolledStudents[i] == student) {
                 enrolledStudents[i] = null;
                 return true;
             }
