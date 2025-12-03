@@ -31,5 +31,7 @@ public class CourseTester {
         System.out.println(student1.getFinalAverage());
         System.out.println(course.calculateTestAverage(1));
         System.out.println(course.toString());
+
+        System.out.println(course.isFull());
     }
 }
