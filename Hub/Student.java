@@ -42,10 +42,11 @@ public class Student {
         this.name = newDisplayName;
     }
 
+    // DONT DO ANYTHING FOR RESTPASSWORD
     public String resetPassword() {
-        // if (name == null || name.trim().isEmpty()) {
-        // throw new IllegalStateException("Student name missing.");
-        // }
+        if (name == null || name.trim().isEmpty()) {
+            throw new IllegalStateException("Student name missing.");
+        }
         // Simple random password generator for demo purposes
         Random r = new Random();
         StringBuilder sb = new StringBuilder();
@@ -54,26 +55,25 @@ public class Student {
         }
         password = sb.toString();
         // Never triggerable because the password is always 12 characters long.
-        // if (password.length() < 8) {
-        // throw new IllegalStateException("Password generator failed.");
-        // }
+        if (password.length() < 8) {
+            throw new IllegalStateException("Password generator failed.");
+        }
         return password;
     }
 
-    // public static Assignment submitAssignment(Assignment[] assignments, int
-    // assignmentCount, String title,
-    // String description) {
-    // if (assignments == null) {
-    // throw new IllegalStateException("Assignment storage missing.");
-    // }
-    // if (assignmentCount >= assignments.length) {
-    // throw new IllegalStateException("Assignment limit reached.");
-    // }
-    // requireNotBlank(title, "title");
-    // requireNotBlank(description, "description");
-    // assignments[assignmentCount] = new Assignment(title, description);
-    // return assignments[assignmentCount++];
-    // }
+    // DONT DO ANYTHING FOR THIS ONE
+    public Assignment submitAssignment(String title, String description) {
+        if (assignments == null) {
+            throw new IllegalStateException("Assignment storage missing.");
+        }
+        if (assignmentCount >= assignments.length) {
+            throw new IllegalStateException("Assignment limit reached.");
+        }
+        requireNotBlank(title, "title");
+        requireNotBlank(description, "description");
+        assignments[assignmentCount] = new Assignment(title, description);
+        return assignments[assignmentCount++];
+    }
 
     private static boolean nameExists(String name) {
         for (int i = 0; i < NAME_COUNT; i++) {
