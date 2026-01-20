@@ -57,14 +57,19 @@ public class Unit4Exercises {
     public static int[] moveEvenBeforeOdd(int[] nums) {
         // to-do: implement the method
         int[] newNums = new int[nums.length];
+        int count = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] % 2 == 0) {
                 newNums[i] = nums[i];
-            } else {
-                newNums[newNums.length - 1 - i] = nums[i];
+            }
+            count = i;
+        }
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] % 2 == 1) {
+                newNums[i + count] = nums[i];
             }
         }
-        return new int[0];
+        return newNums;
     }
 
     // ArrayList Methods
