@@ -61,12 +61,13 @@ public class Unit4Exercises {
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] % 2 == 0) {
                 newNums[i] = nums[i];
+                count = count + 1;
             }
-            count = i;
+
         }
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] % 2 == 1) {
-                newNums[i + count - 1] = nums[i];
+        for (int j = 0; j < nums.length; j++) {
+            if (nums[j] % 2 == 1) {
+                newNums[j + count - 1] = nums[j];
             }
         }
         return newNums;
